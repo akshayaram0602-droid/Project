@@ -1,0 +1,30 @@
+cabal-version:   3.12
+name:            wordle-bot
+version:         0.1.0.0
+license:         NONE
+author:          Akshaya
+maintainer:      akshayaram0602@gmail.com
+build-type:      Simple
+extra-doc-files: README.md
+
+common warnings
+    ghc-options: -Wall
+
+executable wordle-bot
+    import:           warnings
+    main-is:          wordle_haskell.hs
+    other-extensions: OverloadedStrings
+    build-depends:
+        base ^>=4.18.3.0,
+        bytestring,
+        containers,
+        text,
+        transformers,
+        http-conduit,
+        aeson,
+        random,
+        mtl,
+        directory
+
+    hs-source-dirs:   .
+    default-language: Haskell2010
