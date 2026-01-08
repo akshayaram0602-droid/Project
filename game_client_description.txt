@@ -1,0 +1,10 @@
+### `game_client.py` (The "Messenger")
+
+This file handles all the communication with the online game server. Its only job is to talk to the website.
+
+*   **Player Registration:** It handles the initial `POST` request to register a player name and get back a player ID.
+*   **Creating a Game:** It sends the request to start a new game on the server.
+*   **Sending Guesses:** It takes a guess (provided by the `WordleSolver`) and sends it to the server.
+*   **Returning Feedback:** It gets the result from the server (which includes the feedback and any messages) and passes it back to the main script.
+
+This file contains all the `requests` library code, isolating all network-related activity in one place.

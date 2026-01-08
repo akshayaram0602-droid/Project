@@ -1,0 +1,10 @@
+### `wordle_solver.py` (The "Brain")
+
+This file contains the core logic for actually solving the Wordle puzzle. Its responsibilities are:
+
+*   **Loading the Wordlist:** It reads the `5words.txt` file to get a complete list of all possible Wordle answers.
+*   **Managing Word Lists:** It keeps track of the `available_words` that could still be the answer.
+*   **Filtering Logic (`drop_impossibles`):** This is the most important part. It takes the feedback from a guess (like `'gyrgr'`) and eliminates all words from the `available_words` list that no longer fit the criteria.
+*   **Choosing a Word:** It has a method to select the next word to guess from the list of available words. In the current code, this is a random choice, but this is where a more advanced algorithm would go.
+
+This file is completely independent of the online game. It doesn't know anything about websites or network requests; it only focuses on the puzzle-solving strategy.

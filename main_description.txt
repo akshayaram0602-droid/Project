@@ -1,0 +1,14 @@
+### `main.py` (The "Coordinator")
+
+This is the main script that you run from the command line. It acts as the conductor, coordinating the other two modules to run the game.
+
+*   **Initialization:** It creates an instance of the `GameClient` to connect to the server and an instance of the `WordleSolver` to handle the logic.
+*   **Game Loop:** It contains the main `while` loop that runs for each attempt (up to 6 times).
+*   **Orchestration:** Inside the loop, it:
+    1.  Asks the `WordleSolver` to choose a word.
+    2.  Tells the `GameClient` to submit that word to the server.
+    3.  Gets the feedback from the `GameClient`.
+    4.  Gives that feedback to the `WordleSolver` so it can filter its word list.
+*   **User Interface:** It handles all the `print` statements that show the game's progress, the bot's guesses, and the final result.
+
+This structure separates the code into logical, independent parts, making it much cleaner and easier to understand and improve in the future.
